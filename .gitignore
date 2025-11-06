@@ -36,7 +36,8 @@ conda/
 *.ipynb_checkpoints/
 
 # IDE
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 *.swp
 *.swo
