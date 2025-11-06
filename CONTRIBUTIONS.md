@@ -1,6 +1,7 @@
 # Project Contributions & Implementation
 
 ## Overview
+
 This project implements a comprehensive solar farm data analysis system for MoonLight Energy Solutions, analyzing solar radiation and weather data from three West African countries: Benin, Sierra Leone, and Togo.
 
 ## Project Structure
@@ -37,6 +38,7 @@ This project implements a comprehensive solar farm data analysis system for Moon
 **Branch**: `setup-task`
 
 **Contributions**:
+
 - Initialized Git repository with proper branching strategy
 - Created comprehensive `.gitignore` excluding data files and sensitive information
 - Set up Python virtual environment with all required dependencies
@@ -45,12 +47,14 @@ This project implements a comprehensive solar farm data analysis system for Moon
 - Configured VS Code settings for optimal Python development
 
 **Key Files**:
+
 - `.gitignore`: Excludes `data/`, `*.csv`, `.ipynb_checkpoints/`, and other unnecessary files
 - `requirements.txt`: Includes pandas, numpy, matplotlib, seaborn, scipy, scikit-learn, jupyter, and testing libraries
 - `.github/workflows/ci.yml`: Automated CI pipeline that runs on push/PR
 - `.vscode/settings.json`: Python interpreter and formatting configuration
 
 **Commits**:
+
 1. `init: add .gitignore`
 2. `chore: venv setup`
 3. `ci: add GitHub Actions workflow`
@@ -62,14 +66,17 @@ This project implements a comprehensive solar farm data analysis system for Moon
 **Contributions**:
 
 #### Comprehensive EDA Implementation
+
 Each country notebook (`<country>_eda.ipynb`) includes:
 
 1. **Summary Statistics & Missing Value Analysis**
+
    - `df.describe()` for all numeric columns
    - Complete missing value report with `df.isna().sum()`
    - Identification of columns with >5% missing values
 
 2. **Outlier Detection & Data Cleaning**
+
    - Z-score calculation (|Z| > 3) for key variables:
      - GHI, DNI, DHI (solar irradiance)
      - ModA, ModB (module readings)
@@ -79,35 +86,41 @@ Each country notebook (`<country>_eda.ipynb`) includes:
    - Handling of negative irradiance values (set to 0 for nighttime)
 
 3. **Time Series Analysis**
+
    - Daily average line charts for GHI, DNI, DHI, Tamb
    - Monthly bar charts showing seasonal patterns
    - Hourly/diurnal patterns with line charts
    - Identification of anomalies and trends
 
 4. **Cleaning Impact Analysis**
+
    - Grouped analysis by Cleaning flag
    - Before/after comparison of ModA and ModB
    - Percentage improvement calculations
 
 5. **Correlation & Relationship Analysis**
+
    - Comprehensive correlation heatmap (GHI, DNI, DHI, TModA, TModB, Tamb, RH, WS, BP)
    - Scatter plots: WS, WSgust, WD vs GHI
    - Scatter plots: RH vs Tamb, RH vs GHI
    - Identification of strong correlations (|r| > 0.7)
 
 6. **Wind & Distribution Analysis**
+
    - Wind rose (polar plot) for wind direction and speed
    - Histograms for GHI distribution
    - Histograms for Wind Speed distribution
    - Statistical measures (mean, median) on distributions
 
 7. **Temperature Analysis**
+
    - RH influence on temperature readings
    - RH influence on solar radiation
    - Diurnal temperature patterns
    - Module temperature vs ambient temperature comparison
 
 8. **Bubble Chart Visualizations**
+
    - GHI vs Tamb with RH as bubble size
    - GHI vs Tamb with BP as bubble size
 
@@ -116,6 +129,7 @@ Each country notebook (`<country>_eda.ipynb`) includes:
    - All data files properly excluded from version control
 
 **Technical Implementation**:
+
 - Robust file path handling for cross-platform compatibility
 - Efficient data sampling for large datasets (525,600+ records)
 - Comprehensive error handling and data validation
@@ -123,6 +137,7 @@ Each country notebook (`<country>_eda.ipynb`) includes:
 - Statistical analysis using scipy and numpy
 
 **Key Insights Generated**:
+
 - Average GHI values for each country
 - Seasonal patterns and diurnal cycles
 - Correlation relationships between variables
@@ -133,9 +148,10 @@ Each country notebook (`<country>_eda.ipynb`) includes:
 ## Data Quality Improvements
 
 ### Cleaning Steps Applied:
+
 1. **Missing Value Treatment**: Median imputation for all key columns
 2. **Outlier Handling**: Flagged outliers using Z-scores (|Z| > 3), kept for analysis
-3. **Data Validation**: 
+3. **Data Validation**:
    - Negative irradiance values set to 0 (nighttime readings)
    - Unrealistic value checks (temperature, humidity ranges)
 4. **Data Export**: Cleaned datasets saved for further analysis
@@ -143,14 +159,17 @@ Each country notebook (`<country>_eda.ipynb`) includes:
 ## Statistical Methods Used
 
 1. **Z-Score Method**: Standard statistical approach for outlier detection
+
    - Formula: Z = (X - μ) / σ
    - Threshold: |Z| > 3 (99.7% confidence interval)
 
 2. **Correlation Analysis**: Pearson correlation coefficient
+
    - Identifies linear relationships between variables
    - Strong correlations (|r| > 0.7) highlighted
 
 3. **Time Series Resampling**: Daily, monthly, and hourly aggregations
+
    - Enables pattern identification at different time scales
 
 4. **Descriptive Statistics**: Mean, median, standard deviation, quartiles
@@ -177,6 +196,7 @@ Each country notebook (`<country>_eda.ipynb`) includes:
 ## Git Workflow
 
 ### Branching Strategy:
+
 - `main`: Production-ready code
 - `setup-task`: Environment and CI/CD setup
 - `eda-benin`: Benin-specific EDA
@@ -184,6 +204,7 @@ Each country notebook (`<country>_eda.ipynb`) includes:
 - `eda-togo`: Togo-specific EDA
 
 ### Commit Messages:
+
 - Follow conventional commit format
 - Clear, descriptive messages
 - Feature-based commits
@@ -191,6 +212,7 @@ Each country notebook (`<country>_eda.ipynb`) includes:
 ## Dependencies
 
 All dependencies are documented in `requirements.txt`:
+
 - **Data Analysis**: pandas, numpy
 - **Visualization**: matplotlib, seaborn
 - **Statistics**: scipy, scikit-learn
@@ -222,5 +244,4 @@ All dependencies are documented in `requirements.txt`:
 
 ---
 
-*This documentation reflects the complete implementation of Tasks 1 and 2 of the Solar Challenge Week 1 project.*
-
+_This documentation reflects the complete implementation of Tasks 1 and 2 of the Solar Challenge Week 1 project._

@@ -39,17 +39,20 @@ This project analyzes solar farm data from three locations (Benin, Sierra Leone,
 #### Option 1: Using venv (Recommended)
 
 1. **Clone the repository** (if not already done):
+
    ```bash
    git clone <repository-url>
    cd solar-challenge-week1
    ```
 
 2. **Create a virtual environment**:
+
    ```bash
    python -m venv venv
    ```
 
 3. **Activate the virtual environment**:
+
    - On Windows:
      ```bash
      venv\Scripts\activate
@@ -60,6 +63,7 @@ This project analyzes solar farm data from three locations (Benin, Sierra Leone,
      ```
 
 4. **Install dependencies**:
+
    ```bash
    pip install --upgrade pip
    pip install -r requirements.txt
@@ -74,6 +78,7 @@ This project analyzes solar farm data from three locations (Benin, Sierra Leone,
 #### Option 2: Using Conda
 
 1. **Create a conda environment**:
+
    ```bash
    conda create -n solar-challenge python=3.10
    conda activate solar-challenge
@@ -89,6 +94,7 @@ This project analyzes solar farm data from three locations (Benin, Sierra Leone,
 1. **Activate your virtual environment** (if not already active)
 
 2. **Start Jupyter Notebook**:
+
    ```bash
    jupyter notebook
    ```
@@ -101,6 +107,7 @@ This project analyzes solar farm data from three locations (Benin, Sierra Leone,
 ## Data
 
 The dataset contains solar radiation and weather measurements from three locations:
+
 - Benin (Malanville)
 - Sierra Leone (Bumbuna)
 - Togo (Dapaong)
@@ -118,6 +125,7 @@ Comprehensive Exploratory Data Analysis notebooks for each country:
 - **`notebooks/togo_eda.ipynb`**: Complete EDA for Togo (Dapaong)
 
 Each notebook includes:
+
 - Summary statistics and missing value analysis
 - Outlier detection using Z-scores
 - Time series analysis (daily, monthly, hourly patterns)
@@ -136,11 +144,13 @@ Each notebook includes:
 ## Development Workflow
 
 1. Create a new branch for your work:
+
    ```bash
    git checkout -b feature/your-feature-name
    ```
 
 2. Make your changes and commit:
+
    ```bash
    git add .
    git commit -m "feat: your commit message"
@@ -154,6 +164,7 @@ Each notebook includes:
 ## CI/CD
 
 This repository uses GitHub Actions for continuous integration. The workflow automatically:
+
 - Runs on push and pull requests
 - Verifies Python version
 - Installs dependencies from `requirements.txt`
@@ -181,10 +192,10 @@ This repository uses GitHub Actions for continuous integration. The workflow aut
 ## Documentation
 
 For detailed information about contributions and implementation, see:
+
 - [`CONTRIBUTIONS.md`](CONTRIBUTIONS.md) - Complete project documentation
 - [`TASK_2_CHECKLIST.md`](TASK_2_CHECKLIST.md) - Task verification checklist
 
 ## License
 
 This project is part of the Kifiya AI Mastery Training program.
-
