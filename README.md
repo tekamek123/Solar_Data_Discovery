@@ -107,6 +107,32 @@ The dataset contains solar radiation and weather measurements from three locatio
 
 **Note**: Data files are excluded from the repository via `.gitignore`. Ensure you have access to the data files locally in the `data/` directory.
 
+## Project Deliverables
+
+### EDA Notebooks
+
+Comprehensive Exploratory Data Analysis notebooks for each country:
+
+- **`notebooks/benin_eda.ipynb`**: Complete EDA for Benin (Malanville)
+- **`notebooks/sierraleone_eda.ipynb`**: Complete EDA for Sierra Leone (Bumbuna)
+- **`notebooks/togo_eda.ipynb`**: Complete EDA for Togo (Dapaong)
+
+Each notebook includes:
+- Summary statistics and missing value analysis
+- Outlier detection using Z-scores
+- Time series analysis (daily, monthly, hourly patterns)
+- Cleaning impact analysis
+- Correlation and relationship analysis
+- Wind and distribution analysis
+- Temperature and humidity analysis
+- Bubble chart visualizations
+- Cleaned data export
+
+### Documentation
+
+- **`CONTRIBUTIONS.md`**: Detailed documentation of all contributions and implementation details
+- **`TASK_2_CHECKLIST.md`**: Verification checklist for Task 2 requirements
+
 ## Development Workflow
 
 1. Create a new branch for your work:
@@ -138,6 +164,25 @@ This repository uses GitHub Actions for continuous integration. The workflow aut
 2. Create a feature branch
 3. Make your changes
 4. Submit a pull request
+
+## Project Status
+
+✅ **Task 1**: Git & Environment Setup - Complete
+✅ **Task 2**: Data Profiling, Cleaning & EDA - Complete (All 3 countries)
+
+## Key Features
+
+- **Comprehensive EDA**: Full exploratory data analysis for three countries
+- **Data Cleaning**: Robust outlier detection and missing value imputation
+- **Visualizations**: Professional charts and graphs for pattern identification
+- **CI/CD Pipeline**: Automated testing and validation
+- **Clean Code**: Well-documented, reproducible analysis
+
+## Documentation
+
+For detailed information about contributions and implementation, see:
+- [`CONTRIBUTIONS.md`](CONTRIBUTIONS.md) - Complete project documentation
+- [`TASK_2_CHECKLIST.md`](TASK_2_CHECKLIST.md) - Task verification checklist
 
 ## License
 
