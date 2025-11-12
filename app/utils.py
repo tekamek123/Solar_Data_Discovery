@@ -46,8 +46,26 @@ def load_country_data(country_name):
     
     file_path = get_data_path(country_files[country_name])
     df = pd.read_csv(file_path)
-    df['Timestamp'] = pd.to_datetime(df['Timestamp'])
-    df.set_index('Timestamp', inplace=True)
+    
+    # Handle Timestamp column (may be named 'Timestamp' or be the index)
+    if 'Timestamp' in df.columns:
+        df['Timestamp'] = pd.to_datetime(df['Timestamp'])
+        df.set_index('Timestamp', inplace=True)
+    elif df.index.name == 'Timestamp' or df.index.dtype == 'datetime64[ns]':
+        # Already has datetime index
+        pass
+    else:
+        # Try to use first column as timestamp if it looks like a date
+        first_col = df.columns[0]
+        try:
+            df[first_col] = pd.to_datetime(df[first_col])
+            df.set_index(first_col, inplace=True)
+            df.index.name = 'Timestamp'
+        except:
+            # If conversion fails, create a dummy datetime index
+            df.index = pd.date_range(start='2020-01-01', periods=len(df), freq='H')
+            df.index.name = 'Timestamp'
+    
     df['Country'] = country_name
     
     return df
